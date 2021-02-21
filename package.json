@@ -1,0 +1,27 @@
+{
+  "name": "accaliansfwbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThykeAdams/AccaliaNSFWBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThykeAdams/AccaliaNSFWBot/issues"
+  },
+  "homepage": "https://github.com/ThykeAdams/AccaliaNSFWBot#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.11.17",
+    "path": "^0.12.7"
+  }
+}
