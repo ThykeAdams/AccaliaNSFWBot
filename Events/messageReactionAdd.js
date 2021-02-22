@@ -38,7 +38,7 @@ module.exports = (client, reaction, user) => {
                 .setTimestamp()
                 .setFooter(`User was handled by: ${user.tag}`, user.avatarURL())
             )
-            member.roles.add(message.guild.roles.cache.get('812505986715615303')) 
+            member.roles.add(message.guild.roles.cache.get(process.env.NSFWRole)) 
             
             verification.Confirmation = false
             verification.Verified = true

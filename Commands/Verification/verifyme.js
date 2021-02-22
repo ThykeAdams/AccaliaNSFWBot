@@ -26,7 +26,7 @@ module.exports = {
                 .setDescription(`${message.author} wants to be age verified, please DM them and ask for their ID, if you are handling this user, please react below with the 👍`)
                 .setTimestamp()
                 .setColor('BLUE')
-            client.channels.cache.get('812879424587300884').send(embed).then(msg => {
+            client.channels.cache.get(process.env.VerificationChannel).send(embed).then(msg => {
                 msg.react('👍')
                 let newTicket = new verificationSchema({
                     InProgress: true,
@@ -47,7 +47,7 @@ module.exports = {
             
         }
         function alreadyVerified() {
-            if (message.member.roles.cache.has('812505986715615303')) {
+            if (message.member.roles.cache.has(process.env.NSFWRole)) {
                 message.channel.send(new Discord.MessageEmbed()
                     .setColor('GREEN')
                     .setTitle('Already Verified')
@@ -58,7 +58,7 @@ module.exports = {
                     .setColor('GREEN')
                     .setDescription(`Huh?? you alre already verified but you no has role? >w< Looks wike we has a probwem~ No wowwy, I gotchu. You has wole nows OwO`)
                 ).then(msg => {
-                    message.member.roles.add(message.guild.roles.cache.get('812505986715615303')) 
+                    message.member.roles.add(message.guild.roles.cache.get(process.env.NSFWRole)) 
                 })
                 
             }

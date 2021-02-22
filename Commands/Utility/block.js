@@ -32,7 +32,7 @@ module.exports = {
                 verification.save()
 
             }
-            user.roles.remove(message.guild.roles.cache.get('812505986715615303')) 
+            user.roles.remove(message.guild.roles.cache.get(process.env.NSFWRole)) 
             message.channel.send(new Discord.MessageEmbed().setColor('RED').setDescription(`${user} is no longer able to use the age verification system`))
         })
 
